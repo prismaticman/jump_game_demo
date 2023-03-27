@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/part1.svg-10513bc71496a728f2bef3b5f358c727.stex"
+path="res://.import/cloudLayer2.png-f0ce572e3d5ea6c0534b843ff5eac1ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/PNG Grass/Spritesheet/part1.svg"
-dest_files=[ "res://.import/part1.svg-10513bc71496a728f2bef3b5f358c727.stex" ]
+source_file="res://Image/Ground/cloudLayer2.png"
+dest_files=[ "res://.import/cloudLayer2.png-f0ce572e3d5ea6c0534b843ff5eac1ad.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

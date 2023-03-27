@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/part1.svg-10513bc71496a728f2bef3b5f358c727.stex"
+path="res://.import/mountains.png-32e0de26121774c25256415f9aeb0af6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/PNG Grass/Spritesheet/part1.svg"
-dest_files=[ "res://.import/part1.svg-10513bc71496a728f2bef3b5f358c727.stex" ]
+source_file="res://Image/Ground/mountains.png"
+dest_files=[ "res://.import/mountains.png-32e0de26121774c25256415f9aeb0af6.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -1,10 +1,10 @@
 extends KinematicBody2D
 #重力
-const gravity = 2000
+const gravity = 2300
 #速度
-const speed = 500
+const speed = 550
 #跳越的高度
-const jump_force = 780
+const jump_force = 820
 #角色的向量
 var velocity = Vector2.ZERO
 #角色是否在跳越
@@ -32,12 +32,13 @@ func _process(delta):
 	var direction = Input.get_action_strength("move_left")-Input.get_action_strength("move_righ")
 	velocity.x = -direction*speed
 	velocity.y += gravity*delta
+	#动画播放
 	if is_on_jumping:
 		AnimatedSprite.play("jump")
 	elif direction == 0:
 		AnimatedSprite.play("idle")
-		
 	else:
 		AnimatedSprite.play("walk")
-		#水平
+	#水平翻转	
+	if direction !=0 :	
 		AnimatedSprite.flip_h  = direction>0
