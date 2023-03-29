@@ -20,22 +20,22 @@ animations = [ {
 "frames": [ ExtResource( 13 ) ],
 "loop": true,
 "name": "idle",
-"speed": 10.0
+"speed": 25.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "jump",
-"speed": 10.0
+"speed": 25.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "run",
-"speed": 10.0
+"speed": 25.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk",
-"speed": 10.0
+"speed": 25.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
