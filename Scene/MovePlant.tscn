@@ -45,7 +45,7 @@ _data = {
 [node name="MovePlant" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 0, -153.22 )
+position = Vector2( 0, -1.77056 )
 motion/sync_to_physics = true
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
@@ -70,7 +70,7 @@ anims/idle = SubResource( 4 )
 curve = SubResource( 2 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 0, -153.22 )
+position = Vector2( 0, -1.77056 )
 rotate = false
 loop = false
 
