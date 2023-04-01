@@ -38,6 +38,7 @@ func _ready():
 	
 #当按键按下时推进对话	
 func _unhandled_input(event):
+	get_tree().paused = canvas_layer.visible
 	if event.is_action_pressed("ui_accept"):
 		if tween.is_active():
 			tween.remove_all()
@@ -48,7 +49,7 @@ func _unhandled_input(event):
 			_show_dialog(current+1)
 		else:
 			hide_dialog_box()
-		get_tree().paused = canvas_layer.visible
+		
 		get_tree().set_input_as_handled()
 		
 
@@ -80,7 +81,4 @@ func _show_dialog(index):
 	)
 	#开始动画
 	tween.start()
-
-	
-
 
