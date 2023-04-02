@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Image/Coin/coin_01.png" type="Texture" id=1]
 [ext_resource path="res://Script/Coin.gd" type="Script" id=2]
-[ext_resource path="res://Audio/Coins/metalLatch.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Audio/Coins/coin.mp3" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 16.0
@@ -127,5 +127,6 @@ anims/idle = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+bus = "SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]

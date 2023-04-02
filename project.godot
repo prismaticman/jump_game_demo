@@ -14,6 +14,10 @@ config/name="jump_game"
 run/main_scene="res://Scene/World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://Scene/Globals.tscn"
+
 [display]
 
 window/handheld/orientation="portrait"

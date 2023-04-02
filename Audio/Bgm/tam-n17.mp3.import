@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tam-n17.mp3-5e67b4f70fc95ff7440f75cf72def911.mp3str"
+
+[deps]
+
+source_file="res://Audio/Bgm/tam-n17.mp3"
+dest_files=[ "res://.import/tam-n17.mp3-5e67b4f70fc95ff7440f75cf72def911.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

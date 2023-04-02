@@ -14,7 +14,6 @@ var velocity = Vector2.ZERO
 #角色是否在跳越
 var is_on_jumping = false
 
-
 onready var AnimatedSprite = $AnimatedSprite
 onready var coyot_time = $Timer
 onready var jump_request_time = $Timer2
@@ -42,6 +41,7 @@ func _input(_event):
 		is_on_jumping = true
 		jump_request_time.stop()
 		coyot_time.stop()
+		$AudioStreamPlayer.play(0)
 	#释放按键的时间决定跳越的高度
 	if Input.is_action_just_released("jump") and velocity.y < -jump_force/1.7:
 		velocity.y = -jump_force/1.7
@@ -51,12 +51,9 @@ func _process(delta):
 	#角色的移动向量
 	var direction = Input.get_action_strength("move_left")-Input.get_action_strength("move_righ")
 	#空中与地面的摩檫力差别
-	if is_on_floor():
-		var acc = acceleration
-	else:
-		var acc = air_acceleration
+	var acc = air_acceleration if is_on_floor() else acceleration
 	#使角色有摩檫力
-	velocity.x = move_toward(velocity.x,-direction*max_speed,acceleration*delta)
+	velocity.x = move_toward(velocity.x,-direction*max_speed,acc*delta)
 	velocity.y += gravity*delta
 	#动画播放
 	if is_on_jumping:

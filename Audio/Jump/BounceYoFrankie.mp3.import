@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BounceYoFrankie.mp3-415187790d3db898c07af5ad2d4ad597.mp3str"
+
+[deps]
+
+source_file="res://Audio/Jump/BounceYoFrankie.mp3"
+dest_files=[ "res://.import/BounceYoFrankie.mp3-415187790d3db898c07af5ad2d4ad597.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
