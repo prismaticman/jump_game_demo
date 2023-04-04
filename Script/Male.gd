@@ -8,7 +8,7 @@ const acceleration = max_speed/0.22
 #角色在空中的摩檫力
 const air_acceleration = max_speed/0.06
 #跳越的高度
-const jump_force = 820
+const jump_force = 890
 #角色的向量
 var velocity = Vector2.ZERO
 #角色是否在跳越

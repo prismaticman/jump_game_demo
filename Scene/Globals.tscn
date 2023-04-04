@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Audio/Bgm/tam-n17.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Script/transition.shader" type="Shader" id=2]
-[ext_resource path="res://Image/Rule/5.png" type="Texture" id=3]
+[ext_resource path="res://Image/Rule/6.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Globals.gd" type="Script" id=4]
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 2 )
@@ -10,7 +11,7 @@ shader_param/cutoff = 1.0
 shader_param/feather = 0.1
 shader_param/mask = ExtResource( 3 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:material:shader_param/cutoff")
@@ -24,10 +25,22 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 1.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
-[sub_resource type="Animation" id=3]
-resource_name = "idle"
-loop = true
+[sub_resource type="Animation" id=4]
+resource_name = "fade_in"
+length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/ColorRect:material:shader_param/cutoff")
 tracks/0/interp = 1
@@ -35,13 +48,26 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 0.5, 0.5 ),
 "update": 0,
-"values": [ 1.0 ]
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 0.5, 0.5 ),
+"update": 0,
+"values": [ -2.0, 0.0 ]
 }
 
 [node name="Globals" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
@@ -56,6 +82,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "idle"
-anims/RESET = SubResource( 4 )
-anims/idle = SubResource( 3 )
+anims/RESET = SubResource( 3 )
+anims/fade_in = SubResource( 4 )

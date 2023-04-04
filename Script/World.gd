@@ -2,23 +2,11 @@ extends Node2D
 
 
 
-#
-#func _on_Music_pressed():
-#	var music_id = 2
-#	AudioServer.set_bus_mute(music_id,!AudioServer.is_bus_mute(music_id))
-#
-#	pass # Replace with function body.
-
-
-func _on_Sfx_pressed():
-	var music_id = 2
-	AudioServer.set_bus_mute(music_id,!AudioServer.is_bus_mute(music_id))
-
-	pass # Replace with function body.
-
-
-func _on_Music_pressed():
-	var music_id = 1
-	AudioServer.set_bus_mute(music_id,!AudioServer.is_bus_mute(music_id))
-	
-	pass # Replace with function body.
+func _ready():
+	#用于检测地图的边界
+	var tile_map = $TileMap
+	var camera_2d = $Node2D/Camera2D
+	var rect = tile_map.get_used_rect()
+	camera_2d.limit_bottom = rect.end.y * tile_map.cell_size.y
+	camera_2d.limit_left = rect.position.x * tile_map.cell_size.x
+	camera_2d.limit_right = rect.end.x * tile_map.cell_size.x
