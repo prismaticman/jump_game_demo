@@ -1,9 +1,14 @@
 extends Node2D
+#创建信号
+signal coins_change
+
 #总线变量
 const BGM_ID = 1
 const SFX_ID = 2
 var Bgm_enable = true
 var Sfx_enable = true
+#当数值变化时调用set_coin函数
+var coins_collect:int = 999 setget set_coin
 
 
 onready var animation_player = $AnimationPlayer
@@ -14,6 +19,16 @@ func go_to_world(path):
 	yield(animation_player,"animation_finished")
 	get_tree().change_scene(path)
 	animation_player.play("fade_in")
+	pass
+	
+#获取金币的数量	
+func get_coin():
+	return coins_collect
+
+	
+func set_coin(value):
+	coins_collect = value
+	emit_signal("coins_change")
 	pass
 #读取音乐状态	
 func is_bgm_enabled():
