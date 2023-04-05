@@ -3,7 +3,7 @@
 [ext_resource path="res://Audio/Bgm/tam-n17.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Script/transition.shader" type="Shader" id=2]
 [ext_resource path="res://Image/Rule/6.png" type="Texture" id=3]
-[ext_resource path="res://Scene/Globals.gd" type="Script" id=4]
+[ext_resource path="res://Script/Globals.gd" type="Script" id=4]
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 2 )
@@ -80,6 +80,7 @@ bus = "BGM"
 material = SubResource( 2 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )

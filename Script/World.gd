@@ -1,7 +1,5 @@
 extends Node2D
 
-
-
 func _ready():
 	#用于检测地图的边界
 	var tile_map = $TileMap

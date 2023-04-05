@@ -203,7 +203,7 @@ tile_data = PoolIntArray( 65525, 6, 0, 5, 6, 0, 10, 6, 0, 11, 6, 0, 12, 6, 0, 13
 position = Vector2( 32, 408 )
 
 [node name="MovePlant3" parent="move" instance=ExtResource( 9 )]
-position = Vector2( 624, 440 )
+position = Vector2( 626, 440 )
 
 [node name="MovePlant2" parent="move" instance=ExtResource( 9 )]
 position = Vector2( 2224, 424 )

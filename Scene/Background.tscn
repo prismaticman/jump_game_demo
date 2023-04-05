@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Image/Ground/cloudLayer1.png" type="Texture" id=1]
+[ext_resource path="res://Image/Ground/cloudLayer2.png" type="Texture" id=2]
+[ext_resource path="res://Image/Ground/mountains.png" type="Texture" id=3]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+offset = Vector2( 512, 0 )
+transform = Transform2D( 1, 0, 0, 1, 512, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2( 512, 190 )
+motion_scale = Vector2( 0.4, 1 )
+motion_offset = Vector2( 24, 0 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+position = Vector2( 512, 300 )
+motion_scale = Vector2( 0.6, 1 )
+motion_offset = Vector2( 16, 0 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer2"]
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+position = Vector2( 512, 330 )
+motion_scale = Vector2( 0.8, 1 )
+motion_offset = Vector2( 8, 0 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer3"]
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
