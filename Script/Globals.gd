@@ -7,5 +7,4 @@ func go_to_world(path):
 	yield(animation_player,"animation_finished")
 	get_tree().change_scene(path)
 	animation_player.play("fade_in")
-	
 	pass
