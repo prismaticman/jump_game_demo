@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Font/ZCOOLKuaiLe-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Script/button.tres" type="Theme" id=2]
+[ext_resource path="res://Theme/button.tres" type="Theme" id=2]
 [ext_resource path="res://Script/Title.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Background.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Audio/Ui/click_003.ogg" type="AudioStream" id=5]
@@ -169,7 +169,6 @@ anchor_bottom = 0.5
 margin_top = -300.0
 margin_bottom = 300.0
 script = ExtResource( 3 )
-scroll_velocity = -65
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
 
@@ -274,6 +273,7 @@ theme = ExtResource( 2 )
 text = "返回"
 
 [node name="Title_animation" type="AnimationPlayer" parent="."]
+autoplay = "RESET"
 anims/RESET = SubResource( 2 )
 anims/button_in = SubResource( 1 )
 

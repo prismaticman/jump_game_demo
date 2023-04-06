@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Audio/Bgm/tam-n17.mp3" type="AudioStream" id=1]
-[ext_resource path="res://Script/transition.shader" type="Shader" id=2]
+[ext_resource path="res://Shader/transition.shader" type="Shader" id=2]
 [ext_resource path="res://Image/Rule/6.png" type="Texture" id=3]
 [ext_resource path="res://Script/Globals.gd" type="Script" id=4]
 
@@ -70,11 +70,13 @@ tracks/1/keys = {
 script = ExtResource( 4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 1 )
 autoplay = true
 bus = "BGM"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 material = SubResource( 2 )

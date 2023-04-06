@@ -69,6 +69,7 @@ tracks/0/keys = {
 }
 
 [node name="Area2D" type="Area2D"]
+pause_mode = 2
 position = Vector2( 0, -24 )
 scale = Vector2( 0.39, 0.39 )
 collision_layer = 4
