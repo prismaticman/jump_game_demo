@@ -19,6 +19,7 @@ func go_to_world(path):
 	yield(animation_player,"animation_finished")
 	get_tree().change_scene(path)
 	animation_player.play("fade_in")
+	yield(animation_player,"animation_finished")
 	pass
 	
 #获取金币的数量	

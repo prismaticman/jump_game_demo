@@ -67,6 +67,7 @@ tracks/1/keys = {
 }
 
 [node name="Globals" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

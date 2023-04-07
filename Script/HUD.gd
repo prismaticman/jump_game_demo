@@ -10,3 +10,9 @@ func _ready():
 func on_coin_change():
 	label.text = str(Globals.get_coin())
 	$AnimationPlayer.play_backwards("Eat_coin")
+
+func _on_Button_pressed():
+	$AnimationPlayer.play("pause")
+	yield($AnimationPlayer,"animation_finished")
+	$Pause.show_menu()
+	pass # Replace with function body.
