@@ -71,7 +71,6 @@ pause_mode = 2
 script = ExtResource( 4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-pause_mode = 2
 stream = ExtResource( 1 )
 autoplay = true
 bus = "BGM"

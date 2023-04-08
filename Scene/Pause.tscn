@@ -110,6 +110,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("VBoxContainer:margin_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1121.6 ]
+}
 
 [node name="Pause" type="Control"]
 pause_mode = 2
@@ -127,13 +139,13 @@ color = Color( 0.282353, 0.278431, 0.278431, 0 )
 anchor_right = 0.1
 margin_left = 1024.0
 margin_top = 160.0
-margin_right = 1217.6
+margin_right = 1121.6
 margin_bottom = 428.0
 custom_constants/separation = 100
 alignment = 1
 
 [node name="Continue" type="Button" parent="VBoxContainer"]
-margin_right = 296.0
+margin_right = 200.0
 margin_bottom = 84.0
 custom_fonts/font = SubResource( 1 )
 custom_styles/hover = SubResource( 4 )
@@ -143,7 +155,7 @@ text = "继续"
 
 [node name="Quit2" type="Button" parent="VBoxContainer"]
 margin_top = 184.0
-margin_right = 296.0
+margin_right = 200.0
 margin_bottom = 268.0
 custom_fonts/font = SubResource( 1 )
 custom_styles/hover = SubResource( 4 )

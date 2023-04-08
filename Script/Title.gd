@@ -13,10 +13,12 @@ onready var sfx = $VBoxContainer2/Sfx
 
 export var scroll_velocity = 55
 
+
 func _process(delta):
 	parallax_background.scroll_offset.x += scroll_velocity*delta
 
-
+func _ready():
+	update_button()
 	
 #设置按钮
 func _on_Button2_pressed():
@@ -44,14 +46,15 @@ func _on_Quit_pressed():
 
 #音乐开关
 func _on_Music_pressed():
-	
 	Globals.set_bgm_enable()
+	Globals.save_config()
 	update_button()
 	pass # Replace with function body.
 
 #音效开关
 func _on_Sfx_pressed():
 	Globals.set_sfx_enable()
+	Globals.save_config()
 	update_button()
 	pass # Replace with function body.
 

@@ -10,3 +10,4 @@ func _ready():
 	camera_2d.limit_right = rect.end.x * tile_map.cell_size.x
 	#实例化金币界面
 	add_child(preload("res://Scene/HUD.tscn").instance())
+	#读取数据
